@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VVLAMB's Gadgets</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <a href="index.html">
+                <span class="logobtn">VLAMB's Gadgets</span>
+            </a>
+            <nav>
+                <a id="products-btn" href="products.html">Continue Shopping</a> 
+                <a href="cart.html" class="active"><i class="fas fa-shopping-cart"></i></a> 
+                <a href="index.html" class="shop-now-btn"><i class="fas fa-home"></i>Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-transition">
+        <div class="cart-header">
+            <h2><i class="fas fa-shopping-cart"></i> Your Shopping Cart</h2>
+            <p class="cart-subtitle">Review your items before checkout</p>
+        </div>
+        
+        <div class="cart-actions-top">
+            <button id="select-all" class="action-button"><i class="fas fa-check-square"></i> Select All</button>
+            <button id="remove-selected" class="action-button danger"><i class="fas fa-trash"></i> Remove Selected</button>
+        </div>
+        
+        <div id="cart-items-container">
+            <div id="cart-items" class="animated-grid"></div>
+            <div class="empty-cart-message" style="display: none;">
+                <i class="fas fa-shopping-cart fa-3x"></i>
+                <h3>Your cart is empty</h3>
+                <p>Looks like you haven't added anything to your cart yet.</p>
+                <a href="products.html" class="cta-button">Start Shopping</a>
+            </div>
+        </div>
+        
+        <div id="checkout-container" class="hover-lift">
+            <div class="order-summary">
+                <h3><i class="fas fa-receipt"></i> Order Summary</h3>
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal-price">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping:</span>
+                    <span id="shipping-cost">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax:</span>
+                    <span id="tax-amount">$0.00</span>
+                </div>
+                <div class="summary-divider"></div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="total-price">$0.00</span>
+                </div>
+            </div>
+            
+            <div class="promo-code">
+                <input type="text" placeholder="Promo Code" class="promo-input">
+                <button class="promo-apply-btn">Apply</button>
+            </div>
+            
+            <button id="checkout-btn" onclick="checkout()" class="checkout-button">
+                <i class="fas fa-lock"></i> Secure Checkout
+            </button>
+            
+            <div class="payment-methods">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fab fa-apple-pay"></i>
+            </div>
+        </div>
+        
+        <div id="notification" class="notification">
+            <p id="notification-message"></p>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>About VLAMB</h3>
+                <p>VLAMB is your premier destination for cutting-edge technology and stylish electronics. We curate only the best products to ensure quality, innovation, and exceptional value.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Customer Service</h3>
+                <ul class="footer-links">
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="about.html">About US</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Shop</h3>
+                <ul class="footer-links">
+                    <li><a href="products.html?category=Laptop">Laptops</a></li>
+                    <li><a href="products.html?category=Phone">Smartphones</a></li>
+                    <li><a href="products.html?category=Camera">Cameras</a></li>
+                    <li><a href="products.html?category=Speaker">Speakers</a></li>
+                    <li><a href="products.html?category=All">All Products</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" class="newsletter-input">
+                    <button class="newsletter-btn">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 VLAMB. All Rights Reserved. Designed with <i class="fas fa-heart"></i> for Style and Passion.</p>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>

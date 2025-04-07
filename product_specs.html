@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VLAMB's Gadgets</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <a href="index.html">
+                <span class="logobtn">VLAMB's Gadgets</span>
+            </a>
+           
+            <nav>
+                <a href="products.html" class="shop-now-btn"><i class="fas fa-arrow-left"></i> Back to Products</a>
+                <a href="cart.html" class="shop-now-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                (<span id="cart-count">0</span>)</a> 
+                <a href="index.html" class="shop-now-btn"><i class="fas fa-home"></i>Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-transition">
+        <div id="specs-container" class="product-detail-container">
+            <div class="product-image-gallery">
+                <div class="main-image-container">
+                    <img id="product-image" src="" alt="" class="hover-lift">
+                </div>
+                <div class="thumbnail-gallery">
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <h1 id="product-name" class="product-title"></h1>
+                
+                <div class="product-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="review-count">(42 Reviews)</span>
+                </div>
+                
+                <div class="product-price-container">
+                    <p id="product-price" class="product-price"></p>
+                    <span class="stock-status in-stock"><i class="fas fa-check-circle"></i> In Stock</span>
+                </div>
+                
+                <div class="product-description-container">
+                    <p id="product-description" class="product-description"></p>
+                </div>
+                
+                <div class="product-specs" id="product-specs">
+                </div>
+                
+                <div class="product-features" id="product-features">
+                </div>
+                
+                <div class="quantity-selector">
+                    <label for="quantity">Quantity:</label>
+                    <div class="quantity-controls">
+                        <button id="decrease-quantity" class="quantity-btn"><i class="fas fa-minus"></i></button>
+                        <input type="number" id="quantity" min="1" value="1">
+                        <button id="increase-quantity" class="quantity-btn"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+                
+                <div class="product-actions">
+                    <button class="add-to-cart-btn" onclick="addToCartFromSpecs()">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+                
+                <div class="product-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">SKU:</span>
+                        <span class="meta-value" id="product-sku">VLAMB-</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Category:</span>
+                        <span class="meta-value" id="product-category"></span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Tags:</span>
+                        <span class="meta-value">Premium, Technology, Gadgets</span>
+                    </div>
+                </div>
+                
+                <div class="share-product">
+                    <span>Share:</span>
+                    <div class="social-share">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-tabs">
+            <div class="tab-header">
+                <button class="tab-btn active" data-tab="description">Description</button>
+                <button class="tab-btn" data-tab="specs">Specifications</button>
+                <button class="tab-btn" data-tab="reviews">Reviews</button>
+                <button class="tab-btn" data-tab="shipping">Shipping & Returns</button>
+            </div>
+            
+            <div class="tab-content">
+                <div class="tab-pane active" id="description-tab">
+                    <p id="full-description"></p>
+                </div>
+                
+                <div class="tab-pane" id="specs-tab">
+                    <div id="specifications-list">
+                    </div>
+                </div>
+                
+                <div class="tab-pane" id="reviews-tab">
+                    <div class="reviews-summary">
+                        <div class="average-rating">
+                            <h3>4.5</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p>Based on 42 reviews</p>
+                        </div>
+                        
+                        <div class="rating-distribution">
+                        </div>
+                    </div>
+                    
+                    <div class="user-reviews">
+
+                    </div>
+                </div>
+                
+                <div class="tab-pane" id="shipping-tab">
+                    <h3>Shipping Information</h3>
+                    <p>We offer free standard shipping on all orders over $50. Expedited and international shipping options are available at checkout.</p>
+                    
+                    <h3>Returns Policy</h3>
+                    <p>If you're not completely satisfied with your purchase, you can return it within 30 days for a full refund or exchange.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="related-products">
+            <h2>You May Also Like</h2>
+            <div id="related-products-container" class="product-slider">
+            </div>
+        </div>
+        
+        <div id="notification" class="notification">
+            <p id="notification-message"></p>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>About VLAMB</h3>
+                <p>VLAMB is your premier destination for cutting-edge technology and stylish electronics. We curate only the best products to ensure quality, innovation, and exceptional value.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Customer Service</h3>
+                <ul class="footer-links">
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="about.html">About US</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Shop</h3>
+                <ul class="footer-links">
+                    <li><a href="products.html?category=Laptop">Laptops</a></li>
+                    <li><a href="products.html?category=Phone">Smartphones</a></li>
+                    <li><a href="products.html?category=Camera">Cameras</a></li>
+                    <li><a href="products.html?category=Speaker">Speakers</a></li>
+                    <li><a href="products.html?category=All">All Products</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" class="newsletter-input">
+                    <button class="newsletter-btn">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 VLAMB. All Rights Reserved. Designed with <i class="fas fa-heart"></i> for Style and Passion.</p>
+        </div>
+    </footer>
+    
+    <script src="data.js"></script>
+    <script src="srcipt.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = parseInt(urlParams.get("id"));
+            
+            if (productId) {
+                displayProductSpecs(productId);
+                setupQuantityControls();
+                setupTabs();
+                updateCartCount();
+            } else {
+                console.log("No product ID found.");
+                document.getElementById("specs-container").innerHTML = "<p>Product not found.</p>";
+            }
+        });
+        
+        function displayProductSpecs(id) {
+            const product = getProductById(id);
+            
+            if (product) {
+                document.getElementById("product-name").innerText = product.name;
+                document.getElementById("product-image").src = product.image;
+                document.getElementById("product-image").alt = product.name;
+                document.getElementById("product-description").innerText = product.description;
+                document.getElementById("product-price").innerText = `$${product.price.toFixed(2)}`;
+                document.getElementById("product-category").innerText = product.category;
+                document.getElementById("product-sku").innerText = `VLAMB-${product.id}`;
+                document.getElementById("full-description").innerText = product.description;
+                
+                if (product.specs) {
+                    const specsDiv = document.getElementById("product-specs");
+                    specsDiv.innerHTML = "<h3>Key Specifications</h3><ul class='specs-list'></ul>";
+                    const specsList = specsDiv.querySelector('.specs-list');
+                    
+                    for (const [key, value] of Object.entries(product.specs)) {
+                        const listItem = document.createElement("li");
+                        listItem.innerHTML = `<strong>${key.charAt(0).toUpperCase() + key.slice(1)}:</strong> ${value}`;
+                        specsList.appendChild(listItem);
+                    }
+                    
+                    const specsTab = document.getElementById("specifications-list");
+                    specsTab.innerHTML = "<table class='specs-table'></table>";
+                    const specsTable = specsTab.querySelector('.specs-table');
+                    
+                    for (const [key, value] of Object.entries(product.specs)) {
+                        const row = document.createElement("tr");
+                        row.innerHTML = `<td class="spec-name">${key.charAt(0).toUpperCase() + key.slice(1)}</td><td class="spec-value">${value}</td>`;
+                        specsTable.appendChild(row);
+                    }
+                }
+                
+                if (product.features && product.features.length > 0) {
+                    const featuresDiv = document.getElementById("product-features");
+                    featuresDiv.innerHTML = "<h3>Key Features</h3><ul class='features-list'></ul>";
+                    const featuresList = featuresDiv.querySelector('.features-list');
+                    
+                    product.features.forEach(feature => {
+                        const listItem = document.createElement("li");
+                        listItem.innerHTML = `<i class="fas fa-check"></i> ${feature}`;
+                        featuresList.appendChild(listItem);
+                    });
+                }
+                
+                 const relatedProducts = getProductsByCategory(product.category).filter(p => p.id !== product.id).slice(0, 4);
+                const relatedContainer = document.getElementById("related-products-container");
+                relatedContainer.innerHTML = '';
+                
+                relatedProducts.forEach(relatedProduct => {
+                    const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+                    const isInWishlist = wishlist.includes(relatedProduct.id);
+                    const wishlistIcon = isInWishlist ? 'fas fa-heart' : 'far fa-heart';
+                    
+                    const productDiv = document.createElement("div");
+                    productDiv.className = "product hover-lift";
+                    productDiv.innerHTML = `
+                        <div class="product-image-container">
+                            <a href="product_specs.html?id=${relatedProduct.id}">
+                                <img src="${relatedProduct.image}" alt="${relatedProduct.name}" class="product-image">
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <a href="product_specs.html?id=${relatedProduct.id}">
+                                <h3 class="product-title">${relatedProduct.name}</h3>
+                                <p class="price">$${relatedProduct.price.toFixed(2)}</p>
+                            </a>
+                            <button class="add-to-cart-btn" onclick="addToCart(${relatedProduct.id})">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    `;
+                    relatedContainer.appendChild(productDiv);
+                });
+            } else {
+                document.getElementById("specs-container").innerHTML = "<p>Product not found.</p>";
+            }
+        }
+        
+        function setupQuantityControls() {
+            const decreaseBtn = document.getElementById("decrease-quantity");
+            const increaseBtn = document.getElementById("increase-quantity");
+            const quantityInput = document.getElementById("quantity");
+            
+            decreaseBtn.addEventListener("click", () => {
+                const currentValue = parseInt(quantityInput.value);
+                if (currentValue > 1) {
+                    quantityInput.value = currentValue - 1;
+                }
+            });
+            
+            increaseBtn.addEventListener("click", () => {
+                const currentValue = parseInt(quantityInput.value);
+                quantityInput.value = currentValue + 1;
+            });
+        }
+        
+        function setupTabs() {
+            const tabButtons = document.querySelectorAll(".tab-btn");
+            const tabPanes = document.querySelectorAll(".tab-pane");
+            
+            tabButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    tabButtons.forEach(btn => btn.classList.remove("active"));
+                    tabPanes.forEach(pane => pane.classList.remove("active"));
+                    
+                    button.classList.add("active");
+                    
+                    const tabId = button.getAttribute("data-tab");
+                    document.getElementById(`${tabId}-tab`).classList.add("active");
+                });
+            });
+        }
+        
+        function addToCartFromSpecs() {
+            const params = new URLSearchParams(window.location.search);
+            const productId = parseInt(params.get("id"));
+            const quantity = parseInt(document.getElementById("quantity").value) || 1;
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            
+            const product = getProductById(productId);
+            if (!product) return;
+            
+            for (let i = 0; i < quantity; i++) {
+                cart.push(product);
+            }
+            
+            localStorage.setItem("cart", JSON.stringify(cart));
+            updateCartCount();
+            showNotification(`${product.name} has been added to your cart!`);
+        }
+        
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            document.getElementById("cart-count").innerText = cart.length;
+        }
+        
+        function showNotification(message) {
+            const notification = document.getElementById("notification");
+            const notificationMessage = document.getElementById("notification-message");
+            
+            notificationMessage.innerText = message;
+            notification.classList.add("show");
+            
+            setTimeout(() => {
+                notification.classList.remove("show");
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

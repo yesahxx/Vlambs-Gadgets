@@ -1,0 +1,59 @@
+/* VLAMB E-commerce - Category Button Styles */
+
+.category-btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.category-btn::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.category-btn:hover::before,
+.category-btn.active::before {
+    width: 100%;
+}
+
+.category-btn.active {
+    background-color: var(--primary);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.category-btn:hover {
+    background-color: var(--primary);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Larger buttons for mobile */
+@media (max-width: 768px) {
+    .category-btn {
+        padding: 12px 20px;
+        font-size: 1.1rem;
+        width: 100%;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+}
+
+/* Category layout for better display */
+@media (min-width: 768px) {
+    nav .category-btn {
+        margin-right: 5px;
+    }
+}

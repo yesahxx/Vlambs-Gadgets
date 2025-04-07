@@ -1,0 +1,151 @@
+/* VLAMB E-commerce - Sign In Modal Styles */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1100;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--white);
+    width: 90%;
+    max-width: 400px;
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    animation: modalSlideIn 0.3s ease forwards;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal h2 {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    position: relative;
+}
+
+.modal h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--secondary);
+    border-radius: 2px;
+}
+
+.modal input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.modal input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(78, 86, 245, 0.1);
+}
+
+.modal button {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#submit-sign-in {
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+}
+
+#submit-sign-in:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+#close-modal {
+    background-color: var(--white);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+#close-modal:hover {
+    background-color: var(--background-alt);
+}
+
+/* Sign In/Out buttons */
+#sign-in-btn, #sign-out-btn {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: var(--text-color);
+    padding: 8px 16px;
+    border-radius: var(--radius);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+#sign-in-btn:hover {
+    background-color: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+#sign-out-btn {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+#sign-out-btn:hover {
+    background-color: #dc3545;
+    color: var(--white);
+}
+
+.welcome-text {
+    margin-right: 10px;
+    font-weight: 500;
+    color: var(--primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .modal-content {
+        padding: 2rem 1.5rem;
+    }
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VLAMB's Gadgets</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <span class="logobtn">VLAMB's Gadgets</span>
+            </a>
+        </div>
+        
+        <nav>
+            <a href="about.html">About Us</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="index.html" class="shop-now-btn"><i class="fas fa-home"></i>Home</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="contact-container">
+            <div class="contact-header">
+                <h1>Get in Touch</h1>
+                <p>Have questions about our products or services? Need help with an order? Our team is here to assist you. Fill out the form below or use any of our contact methods.</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Visit Us</h3>
+                            <p>456 Delgado Street<br>
+                            City Proper<br>
+                            Iloilo City, 5000<br>
+                            Philippines</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Call Us</h3>
+                            <p>Customer Support:<br>
+                            +63 (33) 555-1234<br><br>
+                            Business Inquiries:<br>
+                            +63 (33) 555-5678</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email Us</h3>
+                            <p>Customer Support:<br>
+                            support@vlamb.com<br><br>
+                            Business Inquiries:<br>
+                            business@vlamb.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Hours</h3>
+                            <p>Monday - Friday:<br>
+                            9:00 AM - 6:00 PM PHT<br><br>
+                            Saturday:<br>
+                            10:00 AM - 4:00 PM PHT</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social">
+                        <h3>Connect With Us</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <h2>Send Us a Message</h2>
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Your Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected>Select a subject</option>
+                                <option value="product-inquiry">Product Inquiry</option>
+                                <option value="order-status">Order Status</option>
+                                <option value="returns">Returns & Refunds</option>
+                                <option value="technical-support">Technical Support</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Subscribe to our newsletter for exclusive offers and updates</label>
+                        </div>
+                        
+                        <button type="submit" class="submit-button">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="contact-map">
+                <h2>Our Location</h2>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125428.30139198661!2d122.48834282071406!3d10.713782576103652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aee53898c2b273%3A0xd6371f90a88432c6!2sIloilo%20City%2C%20Iloilo%2C%20Philippines!5e0!3m2!1sen!2s!4v1712235284624!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            
+            <div class="contact-faq">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find quick answers to common questions about our products and services in our FAQ section.</p>
+                <a href="faq.html" class="primary-button">
+                    <i class="fas fa-question-circle"></i> View FAQs
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>VLAMB</h3>
+                <p>Crafting premium tech and lifestyle products that combine elegance, functionality, and innovation.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Customer Service</h3>
+                <ul class="footer-links">
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="about.html">About US</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Shop</h3>
+                <ul class="footer-links">
+                    <li><a href="products.html?category=Laptop">Laptops</a></li>
+                    <li><a href="products.html?category=Phone">Smartphones</a></li>
+                    <li><a href="products.html?category=Camera">Cameras</a></li>
+                    <li><a href="products.html?category=Speaker">Speakers</a></li>
+                    <li><a href="products.html?category=All">All Products</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" class="newsletter-input">
+                    <button class="newsletter-btn">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 VLAMB. All Rights Reserved. Designed with <i class="fas fa-heart"></i> for Style and Passion.</p>
+        </div>
+    </footer>
+    
+    <div id="notification" class="notification">
+        <p id="notification-message"></p>
+    </div>
+    
+    <script src="data.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+           
+            updateCartCount();
+            
+            initContactForm();
+            
+            initAuth();
+        });
+        
+        function initContactForm() {
+            const contactForm = document.getElementById("contact-form");
+            
+            if (contactForm) {
+                contactForm.addEventListener("submit", function(e) {
+                    e.preventDefault();
+                    
+                    
+                    const name = document.getElementById("name").value;
+                    const email = document.getElementById("email").value;
+                    const subject = document.getElementById("subject").value;
+                    const message = document.getElementById("message").value;
+                    
+                    contactForm.reset();
+                    
+                   
+                    showNotification("Thank you for your message! We'll get back to you soon.");
+                });
+            }
+        }
+        
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            document.getElementById("cart-count").innerText = cart.length;
+        }
+        
+        function showNotification(message) {
+            const notification = document.getElementById("notification");
+            const notificationMessage = document.getElementById("notification-message");
+            
+            notificationMessage.innerText = message;
+            notification.classList.add("show");
+            
+            setTimeout(() => {
+                notification.classList.remove("show");
+            }, 3000);
+        }
+        
+        function initAuth() {
+            const signInBtn = document.getElementById("sign-in-btn");
+            const user = JSON.parse(localStorage.getItem("user"));
+            
+            if (user) {
+                signInBtn.innerHTML = `<i class="fas fa-user"></i> <span>Hi, ${user.username}</span>`;
+                signInBtn.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    localStorage.removeItem("user");
+                    window.location.reload();
+                });
+            } else {
+                signInBtn.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    window.location.href = "index.html#sign-in";
+                });
+            }
+        }
+    </script>
+</body>
+</html>
